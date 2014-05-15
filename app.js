@@ -1,17 +1,30 @@
 $(document).ready(function(){
 
-	function addItem(){
+	//error when nothing is inputed
+
+	$('.add').click(function(){
 		var entryItem=$('.entry').val();
-		if (entryItem===''){
-		alert('Enter an item');
-		}
-		else{
-			$('.items').appendTo('#items').html(addItem+$(".remove"));
+
+
+		if (entryItem.trim().length !== 0){
+			
+			var $newItem = $("<li>").addClass("items");
+			$newItem.text(entryItem);
+		
+			$newItem.appendTo("#items");
+			$('.entry').val('');
+
+			var $checkItem= $("<div>").addClass("unchecked");
+			$checkItem.prependTo($newItem);
+
+
+		} else {
+			alert('Enter an item');
 		}
 
-		$('.entry').val('');
-	}
+		return false;
 
-	$('.add').click(addItem);
+	});
+
 
 });
