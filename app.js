@@ -11,7 +11,7 @@ $(document).ready(function(){
 			var $newItem = $("<li>").addClass("items");
 			$newItem.text(entryItem);
 		
-			$newItem.appendTo("#items");
+			$newItem.appendTo("#items1");
 			$('.entry').val('');
 
 			var $checkItem= $("<div>").addClass("unchecked");
@@ -29,18 +29,21 @@ $(document).ready(function(){
 
 	});
 
-	$('#items').on('click', '.remove', function(){
+	$('#items1').on('click', '.remove', function(){
 		$(this).closest('li').remove();
 
 	});
 
 	function clear(){
-		$('#items').children('.items').remove();
+		$('#items1').children().remove();
 	}
 
 	$('.clear').on('click', function(){
+		//alert($('#items1').children('.items').attr('class'));
 
 		clear();
+
+		return false;
 	});
 
 
