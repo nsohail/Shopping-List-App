@@ -17,6 +17,9 @@ $(document).ready(function(){
 			var $checkItem= $("<div>").addClass("unchecked");
 			$checkItem.prependTo($newItem);
 
+			var $removeOption= $("<button>").addClass("remove").text('remove');
+			$removeOption.appendTo($newItem);
+
 
 		} else {
 			alert('Enter an item');
@@ -24,6 +27,20 @@ $(document).ready(function(){
 
 		return false;
 
+	});
+
+	$('#items').on('click', '.remove', function(){
+		$(this).closest('li').remove();
+
+	});
+
+	function clear(){
+		$('#items').children('.items').remove();
+	}
+
+	$('.clear').on('click', function(){
+
+		clear();
 	});
 
 

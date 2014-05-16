@@ -1,3 +1,7 @@
+*{
+	font-family: Quicksand, sans-serif;
+}
+
 header{
 	background-color:#3a3a3a;
 	height:250px;
@@ -36,6 +40,7 @@ header{
 	background-repeat: no-repeat;
 	background-position: 25px 50%;
 	line-height:30px;
+	font-family:quicksand, sans-serif;
 	}
 
 
@@ -62,4 +67,23 @@ header{
 	border:0;
 	float:right;
 	margin-right:0;
+}
+
+
+#container{
+	min-width:460px;
+}
+
+
+.clear{
+	background-color: #a3a3a3;
+	padding:15px 40px 15px 40px;
+	border-radius: 5px 5px 0 0;
+	border:0;
+	margin: auto;
+}
+
+.bottom_tab{
+	background-color: #a3a3a3;
+	height:40px;
 }
