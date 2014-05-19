@@ -35,7 +35,7 @@ $(document).ready(function(){
 
     $('#items1').on('click', 'div', function () {
         $(this).toggleClass('checked unchecked');
-        
+        $(this).siblings('span').toggleClass('checkedText');
     });
 
 
@@ -46,13 +46,14 @@ $(document).ready(function(){
 
 
 
-	function clear(){
+		function clear(){
 
 		//$('#clear').animate({bottom:0},100);
-		$('#clear').animate({height: "toggle"}, 500);
+		//$('#clear').animate({height: "toggle"}, 500);
 		$('#items1').children().remove();
-		
 	}
+
+
 
 	$('.clear').on('click', function(){
 		//alert($('#items1').children('.items').attr('class'));

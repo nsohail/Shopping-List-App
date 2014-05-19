@@ -10,7 +10,7 @@ body, html{
 
 form{
 	position: relative;
-	
+	height:100%;
 }
 
 
@@ -33,7 +33,8 @@ header{
 }
 
 .checked{
-	background-image:url('images/checked.jpg');	
+	background-image:url('images/checked.jpg');
+	text-decoration: line-through;	
 }
 
 .checkedText{
@@ -45,9 +46,7 @@ header{
 	height:30px;
 	float:left;
 	margin-right: 15px;
-
 }
-
 
 
 .items{
@@ -101,7 +100,7 @@ header{
 }
 
 #clear{
-	position: absolute;
+	position: fixed;
 	width:100%;
 	bottom:0;
 }
