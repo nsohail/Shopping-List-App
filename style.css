@@ -1,11 +1,17 @@
 body, html{
 	height:100%;
+	position: relative;
 }
+
 
 *{
 	font-family: Quicksand, sans-serif;
 }
 
+form{
+	position: relative;
+	
+}
 
 
 header{
@@ -83,8 +89,6 @@ header{
 
 #container{
 	min-width:800px;
-	height:100%;
-	position:relative;
 }
 
 
@@ -97,7 +101,7 @@ header{
 }
 
 #clear{
-	position:absolute;
+	position: absolute;
 	width:100%;
 	bottom:0;
 }
