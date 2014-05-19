@@ -6,16 +6,20 @@
 html, body{
 	height:100%;
 	position: relative;
+	min-width:800px;
 }
 
 
-form{
-	
+#wrapper{
+	overflow:hidden;
 }
+
+
 
 #container{
 	min-width:800px;
 	position:relative;
+	min-height:65%;
 }
 
 
@@ -23,8 +27,10 @@ header{
 	background-color:#3a3a3a;
 	width:100%;
 	min-width:800px;
-	min-height:250px;
+	min-height:25%;
 }
+
+
 
 
 #search_area{
@@ -126,9 +132,8 @@ header{
 	width:100%;
 	bottom:0;
 	position: relative;
+	height:10%;
 }
-
-
 
 .bottom_tab{
 	background-color: #a3a3a3;
