@@ -30,10 +30,14 @@ $(document).ready(function(){
 	});
 
 
-	$('#items1').on('click', '.unchecked',function(){
+	//crossing off a list item
+
+	$('#items1').on('click','.unchecked',function(){
 		
-		//$(this).closest('.unchecked').hide();
-		alert('working');
+		$(this).closest('.unchecked').hide();
+		$('.checked').show();
+		$('<li>').addClass('checkedText');
+	
 		
 			
 		});

@@ -24,6 +24,10 @@ header{
 	display: none;	
 }
 
+.checkedText{
+	text-decoration: line-through;
+}
+
 .unchecked, .checked{
 	width:30px;
 	height:30px;
