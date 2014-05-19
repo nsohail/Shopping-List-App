@@ -1,28 +1,29 @@
-html{
-	height:100%;
-	position:relative;
-}
 
 *{
 	font-family: Quicksand, sans-serif;
 }
 
+html, body{
+	height:100%;
+	position: relative;
+}
+
 
 form{
-	position: relative;
-	height:100%;
+	
 }
 
-body{
-	min-height:100%;
-
+#container{
+	min-width:800px;
+	position:relative;
 }
+
 
 header{
 	background-color:#3a3a3a;
 	width:100%;
 	min-width:800px;
-	min-height:25%;
+	min-height:250px;
 }
 
 
@@ -76,12 +77,21 @@ header{
 	border:1px solid #a3a3a3;
 }
 
+
+.entry:focus{
+	outline:none;
+}
 .add{
 	background-color: #a3a3a3;
 	padding:15px 25px 15px 25px;
 	border-radius: 10px;
 	float:right;
 	border:0;
+}
+
+.add:focus{
+	outline:none;
+    box-shadow: inset 0 .5px 0 2px #635F5F;
 }
 
 .remove{
@@ -93,11 +103,11 @@ header{
 	margin-right:0;
 }
 
-
-#container{
-	min-width:800px;
-	min-height:65%;
+.remove:focus{
+	outline:none;
 }
+
+
 
 
 .clear{
@@ -108,12 +118,14 @@ header{
 	margin: auto;
 }
 
-
+.clear:focus{
+	outline:none;
+}
 
 #clear{
 	width:100%;
 	bottom:0;
-	height:10%;
+	position: relative;
 }
 
 

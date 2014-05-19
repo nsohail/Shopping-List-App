@@ -10,7 +10,7 @@ $(document).ready(function(){
 			
 			$('#items1').append('<li class="items"><div class="unchecked"></div><span class="text">'+entryItem+'</span><button type "button" class="remove">Remove</button></li>');
 
-			//$('.entry').val('');
+			$('.entry').val('');
 
 
 		} else {
