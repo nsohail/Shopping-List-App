@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 
 		if (entryItem.trim().length !== 0){
-			
+
 			$('#items1').append('<li class="items"><div class="unchecked"></div><span class="text">'+entryItem+'</span><button type "button" class="remove">Remove</button></li>');
 
 			$('.entry').val('');
@@ -39,6 +39,7 @@ $(document).ready(function(){
 
 
 		function clear(){
+
 		//$('#clear').animate({bottom:0},100);
 		//$('#clear').animate({height: "toggle"}, 500);
 		$('#items1').children().remove();
