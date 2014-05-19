@@ -1,13 +1,20 @@
+body, html{
+	height:100%;
+}
+
 *{
 	font-family: Quicksand, sans-serif;
 }
 
+
+
 header{
 	background-color:#3a3a3a;
-	height:250px;
 	width:100%;
 	min-width:800px;
+	height:25%;
 }
+
 
 #search_area{
 	background-color:#efefef;
@@ -20,8 +27,7 @@ header{
 }
 
 .checked{
-	background-image:url('images/checked.jpg');
-	display: none;	
+	background-image:url('images/checked.jpg');	
 }
 
 .checkedText{
@@ -77,7 +83,8 @@ header{
 
 #container{
 	min-width:800px;
-	position: relative;
+	height:100%;
+	position:relative;
 }
 
 
@@ -90,8 +97,12 @@ header{
 }
 
 #clear{
-	margin:auto;
+	position:absolute;
+	width:100%;
+	bottom:0;
 }
+
+
 
 .bottom_tab{
 	background-color: #a3a3a3;
@@ -101,4 +112,3 @@ header{
 .tab{
 	text-align:center;
 }
-
