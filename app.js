@@ -29,6 +29,17 @@ $(document).ready(function(){
 
 	});
 
+
+	$('#items1').on('click', '.unchecked',function(){
+		
+		//$(this).closest('.unchecked').hide();
+		alert('working');
+		
+			
+		});
+
+
+
 	$('#items1').on('click', '.remove', function(){
 		$(this).closest('li').remove();
 
@@ -49,6 +60,7 @@ $(document).ready(function(){
 
 		return false;
 	});
+
 
 
 });
