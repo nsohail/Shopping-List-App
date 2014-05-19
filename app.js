@@ -35,7 +35,11 @@ $(document).ready(function(){
 	});
 
 	function clear(){
+
+		//$('#clear').animate({bottom:0},100);
+		$('#clear').animate({height: "toggle"}, 500);
 		$('#items1').children().remove();
+		
 	}
 
 	$('.clear').on('click', function(){

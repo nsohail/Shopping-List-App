@@ -73,6 +73,7 @@ header{
 
 #container{
 	min-width:800px;
+	position: relative;
 }
 
 
@@ -84,6 +85,10 @@ header{
 	margin: auto;
 }
 
+#clear{
+	margin:auto;
+}
+
 .bottom_tab{
 	background-color: #a3a3a3;
 	height:50px;
@@ -92,3 +97,4 @@ header{
 .tab{
 	text-align:center;
 }
+
