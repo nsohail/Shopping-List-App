@@ -1,6 +1,12 @@
+html{
+	height:100%;
+	position:relative;
+}
+
 *{
 	font-family: Quicksand, sans-serif;
 }
+
 
 form{
 	position: relative;
@@ -9,6 +15,7 @@ form{
 
 body{
 	min-height:100%;
+
 }
 
 header{
@@ -30,12 +37,16 @@ header{
 }
 
 .checked{
-	background-image:url('images/checked.jpg');
-	text-decoration: line-through;	
+	background-image:url('images/checked.jpg');	
 }
 
 .checkedText{
 	text-decoration: line-through;
+	color:gray;
+}
+
+.text{
+	color:purple;
 }
 
 .unchecked, .checked{
@@ -96,6 +107,8 @@ header{
 	border:0;
 	margin: auto;
 }
+
+
 
 #clear{
 	width:100%;

@@ -8,17 +8,9 @@ $(document).ready(function(){
 
 		if (entryItem.trim().length !== 0){
 			
-			var $newItem = $("<li>").addClass("items");
-			$newItem.text(entryItem);
-		
-			$newItem.appendTo("#items1");
-			$('.entry').val('');
+			$('#items1').append('<li class="items"><div class="unchecked"></div><span class="text">'+entryItem+'</span><button type "button" class="remove">Remove</button></li>');
 
-			var $checkItem= $("<div>").addClass("unchecked");
-			$checkItem.prependTo($newItem);
-
-			var $removeOption= $("<button>").addClass("remove").text('remove');
-			$removeOption.appendTo($newItem);
+			//$('.entry').val('');
 
 
 		} else {
@@ -35,7 +27,7 @@ $(document).ready(function(){
 
     $('#items1').on('click', 'div', function () {
         $(this).toggleClass('checked unchecked');
-        $(this).siblings('span').toggleClass('checkedText');
+        $(this).siblings('span').toggleClass('text checkedText');
     });
 
 
