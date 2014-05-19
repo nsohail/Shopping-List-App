@@ -1,5 +1,3 @@
-
-
 *{
 	font-family: Quicksand, sans-serif;
 }
@@ -14,7 +12,7 @@ header{
 	background-color:#3a3a3a;
 	width:100%;
 	min-width:800px;
-	height:25%;
+	min-height:25%;
 }
 
 
@@ -84,6 +82,7 @@ header{
 
 #container{
 	min-width:800px;
+	min-height:65%;
 }
 
 
@@ -96,9 +95,9 @@ header{
 }
 
 #clear{
-	position: absolute;
 	width:100%;
 	bottom:0;
+	height:10%;
 }
 
 
