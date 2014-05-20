@@ -139,3 +139,42 @@ header{
 .tab{
 	text-align:center;
 }
+
+.reset-animation{
+	background-color:#cccbca !important;
+	-webkit-animation-name:resetClear;
+	animation-name:resetClear;
+
+	-o-animation-duration:1s;
+	-moz-animation-duration:1s;
+	-webkit-animation-duration:1s;
+	-webkit-animation-iteration-count:2;
+	animation-duration:1s;
+	animation-iteration-count:2;
+
+	-o-animation-direction:alternate;
+	-moz-animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+	animation-direction:alternate;
+
+	-o-timing-function:ease-in-out;
+	-moz-timing-function:ease-in-out;
+	-webkit-timing-function:ease-in-out;
+	timing-function:ease-in-out;
+
+
+}
+
+@-webkit-keyframes resetClear{
+	0%{padding-top:0}
+	100%{padding-top:100%}
+	
+}
+
+@-keyframes resetClear{
+	0%{padding-top:100%}
+	100%{padding-top:0%}
+}
+
+
+
