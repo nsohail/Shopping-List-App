@@ -36,15 +36,11 @@ header{
 header p{
 	font-size: 30px;
 	font-family: Quicksand, sans-serif;
-	vertical-align: middle;
 	padding-top: 50px;
 	color:rgb(34, 190, 195);
 	border:5px double #CA3434;
 	width:300px;
 	padding:30px;
-	position: absolute;
-	top:6%;
-	left:35%;
 	margin:auto;
 }
 
