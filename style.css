@@ -9,29 +9,50 @@ html, body{
 	min-width:800px;
 }
 
+body{
+	background-image: url('images/cork.jpg');
+	background-size: 30%;
+}
+
 
 
 
 #container{
 	min-width:800px;
-	position:relative;
 	min-height:65%;
 }
 
 
 header{
-	background-color:#3a3a3a;
+	background-color:white;
 	width:100%;
 	min-width:800px;
-	min-height:25%;
+	height:150px;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+header p{
+	font-size: 30px;
+	font-family: Quicksand, sans-serif;
+	vertical-align: middle;
+	padding-top: 50px;
+	color:rgb(34, 190, 195);
+	border:1px solid #CA3434;
+	width:300px;
+	padding:30px;
+	position: absolute;
+	top:30px;
+	left:290px;
+	margin:auto;
 }
 
 
 
-
 #search_area{
-	background-color:#efefef;
-	border-bottom: 3px solid #a3a3a3;
+	background-color:#CA3434;
+	border-bottom: 3px solid #7B1F1F;
 	padding:80px 50px 80px 50px;
 }
 
@@ -49,7 +70,8 @@ header{
 }
 
 .text{
-	color:purple;
+	color:#711E1E;
+	font-weight: bold;
 }
 
 .unchecked, .checked{
@@ -61,8 +83,8 @@ header{
 
 
 .items{
-	background-color: #d8d8d8;
-	border-bottom: 1px solid #a3a3a3;
+	background-color: rgba(255, 255, 255, 0.42);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 	padding:50px 0px 50px 50px;
 	background-repeat: no-repeat;
 	background-position: 25px 50%;
@@ -84,7 +106,7 @@ header{
 	outline:none;
 }
 .add{
-	background-color: #a3a3a3;
+	background-color: rgb(34, 190, 195);
 	padding:15px 25px 15px 25px;
 	border-radius: 10px;
 	float:right;
@@ -99,7 +121,7 @@ header{
 .remove{
 	padding:15px 90px 15px 25px;
 	border-radius: 10px 0 0 10px;
-	background-color: #a3a3a3;
+	background-color: rgb(34, 190, 195);
 	border:0;
 	float:right;
 	margin-right:0;
@@ -113,7 +135,7 @@ header{
 
 
 .clear{
-	background-color: #a3a3a3;
+	background-color: rgb(34, 190, 195);
 	padding:15px 40px 15px 40px;
 	border-radius: 5px 5px 0 0;
 	border:0;
@@ -127,12 +149,12 @@ header{
 #clear{
 	width:100%;
 	bottom:0;
-	position: relative;
-	height:10%;
+	position: absolute;
+	height:20px;
 }
 
 .bottom_tab{
-	background-color: #a3a3a3;
+	background-color: rgb(34, 190, 195);
 	height:50px;
 }
 
@@ -141,15 +163,16 @@ header{
 }
 
 .reset-animation{
-	background-color:#cccbca !important;
+	background-color:#a3a3a3; !important;
 	-webkit-animation-name:resetClear;
 	animation-name:resetClear;
 
 	-o-animation-duration:1s;
 	-moz-animation-duration:1s;
 	-webkit-animation-duration:1s;
-	-webkit-animation-iteration-count:2;
 	animation-duration:1s;
+
+	-webkit-animation-iteration-count:2;
 	animation-iteration-count:2;
 
 	-o-animation-direction:alternate;
@@ -161,19 +184,18 @@ header{
 	-moz-timing-function:ease-in-out;
 	-webkit-timing-function:ease-in-out;
 	timing-function:ease-in-out;
-
-
 }
 
-@-webkit-keyframes resetClear{
-	0%{padding-top:0}
-	100%{padding-top:100%}
-	
+
+	@-webkit-keyframes resetClear{
+	0%{padding-left:0}
+	100%{padding-left:90%}	
 }
 
-@-keyframes resetClear{
-	0%{padding-top:100%}
-	100%{padding-top:0%}
+
+	@-keyframes resetClear{
+	0%{padding-left:0}
+	100%{padding-left:90%}
 }
 
 
