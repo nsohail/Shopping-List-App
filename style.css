@@ -30,7 +30,7 @@ header{
 	height:150px;
 	text-align: center;
 	vertical-align: middle;
-
+	min-height: 25%;
 }
 
 header p{
@@ -39,12 +39,12 @@ header p{
 	vertical-align: middle;
 	padding-top: 50px;
 	color:rgb(34, 190, 195);
-	border:1px solid #CA3434;
+	border:5px double #CA3434;
 	width:300px;
 	padding:30px;
 	position: absolute;
-	top:30px;
-	left:290px;
+	top:6%;
+	left:35%;
 	margin:auto;
 }
 
@@ -149,11 +149,10 @@ header p{
 #clear{
 	width:100%;
 	bottom:0;
-	position: absolute;
-	height:20px;
+	height:10%;
 }
 
-.bottom_tab{
+.bottom_tab{;
 	background-color: rgb(34, 190, 195);
 	height:50px;
 }
