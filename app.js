@@ -33,24 +33,35 @@ $(document).ready(function(){
 
 
 	$('#items1').on('click', '.remove', function(){
-		$(this).closest('li').remove();
+		var target=$(this);
+		target.addClass('animate_clear');
+		setTimeout(function(){
+			target.removeClass('animate_clear');}, 2000
+			);
+
+
+
+		/*removeList=function(){
+			$(this).closest('li').remove();
+		};*/
+		
 	});
 
 
 
 		function clear(){
-
-		//$('#clear').animate({bottom:0},100);
-		//$('#clear').animate({height: "toggle"}, 500);
 		$('#items1').children().remove();
 	}
 
 
 
-	$('.clear').on('click', function(){
+	$('#clear').on('click', '.clear', function(){
 		//alert($('#items1').children('.items').attr('class'));
-
-		clear();
+		$(this).addClass('animate_clear_vertical');
+		setTimeout(function(){
+			$(this).removeClass('animate_clear_vertical');}, 2000
+			);
+		//clear();
 
 		return false;
 	});

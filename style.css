@@ -4,9 +4,10 @@
 }
 
 html, body{
+	margin:0;
+	padding:0;
 	height:100%;
-	position: relative;
-	min-width:800px;
+	min-width: 870px;
 }
 
 body{
@@ -18,19 +19,17 @@ body{
 
 
 #container{
-	min-width:800px;
-	min-height:65%;
+	min-height:100%;
+	width:100%;
+	position:relative;
 }
 
 
 header{
 	background-color:white;
 	width:100%;
-	min-width:800px;
 	height:150px;
 	text-align: center;
-	vertical-align: middle;
-	min-height: 25%;
 }
 
 header p{
@@ -86,6 +85,7 @@ header p{
 	background-position: 25px 50%;
 	line-height:30px;
 	font-family:quicksand, sans-serif;
+	position: relative;
 	}
 
 
@@ -115,12 +115,14 @@ header p{
 }
 
 .remove{
-	padding:15px 90px 15px 25px;
+	padding:0 90px 0 25px;
 	border-radius: 10px 0 0 10px;
 	background-color: rgb(34, 190, 195);
 	border:0;
-	float:right;
-	margin-right:0;
+	position: absolute;
+	right:-2px;
+	text-align: left;
+	height:40px;
 }
 
 .remove:focus{
@@ -142,22 +144,121 @@ header p{
 	outline:none;
 }
 
+#content
+{
+	width:100%;
+	padding-bottom: 80px;
+}
+
+
 #clear{
 	width:100%;
 	bottom:0;
-	height:10%;
+	height:80px;
+	position:absolute;
 }
+
 
 .bottom_tab{;
 	background-color: rgb(34, 190, 195);
-	height:50px;
+	height:70px;
 }
 
 .tab{
 	text-align:center;
 }
 
-.reset-animation{
+
+
+
+.animate_clear{
+    animation:anim_remove 1s linear forwards,
+    anim_remove_back 1s linear 1s;
+
+    -webkit-animation:anim_remove 1s linear forwards,
+    anim_remove_back 1s linear 1s;
+}
+
+
+@-webkit-keyframes anim_remove{
+    0%{
+        min-width:157px;
+    }
+    100%{
+        min-width:100%;
+    }
+}
+@keyframes anim_remove{
+    0%{
+        min-width:157px;
+    }
+    100%{
+        min-width:100%;
+    }
+}
+
+
+@-webkit-keyframes anim_remove_back{
+    0%{
+        min-width:100%;
+    }
+    100%{
+        min-width:157px;
+    }
+}
+@keyframes anim_remove_back{
+    0%{
+        min-width:100%;
+    }
+    100%{
+        min-width:157px;
+    }
+}
+
+
+.animate_clear_vertical{
+	animation:anim_clear 1s, anim_clear_remove 1s linear 1s;
+}
+
+@-webkit-keyframes anim_clear{
+    0%{
+        min-height:103px;
+    }
+    100%{
+        min-height:100%;
+    }
+}
+@keyframes anim_clear{
+    0%{
+        min-height:103px;
+    }
+    100%{
+        min-height:100%;
+    }
+}
+
+@-webkit-keyframes anim_clear_back{
+    0%{
+        min-height:100%;
+    }
+    100%{
+        min-height:103px;
+    }
+}
+@keyframes anim_clear_back{
+    0%{
+        min-height:100%;
+    }
+    100%{
+        min-height:103px;
+    }
+}
+
+
+
+
+
+/*.reset-animation{
 	background-color:#a3a3a3; !important;
 	-webkit-animation-name:resetClear;
 	animation-name:resetClear;
@@ -192,6 +293,6 @@ header p{
 	0%{padding-left:0}
 	100%{padding-left:90%}
 }
-
+*/
 
 
