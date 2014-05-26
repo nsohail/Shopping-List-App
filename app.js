@@ -36,7 +36,8 @@ $(document).ready(function(){
 		var target=$(this);
 		target.addClass('animate_clear');
 		setTimeout(function(){
-			target.removeClass('animate_clear');}, 2000
+			target.removeClass('animate_clear');
+		}, 2000
 			);
 
 
@@ -44,6 +45,9 @@ $(document).ready(function(){
 		/*removeList=function(){
 			$(this).closest('li').remove();
 		};*/
+		var removeList=$('#items1').closest('items');
+
+		removeList.remove();
 		
 	});
 
@@ -56,13 +60,7 @@ $(document).ready(function(){
 
 
 	$('#clear').on('click', '.clear', function(){
-		//alert($('#items1').children('.items').attr('class'));
-		$(this).addClass('animate_clear_vertical');
-		setTimeout(function(){
-			$(this).removeClass('animate_clear_vertical');}, 2000
-			);
-		//clear();
-
+		clear();
 		return false;
 	});
 
