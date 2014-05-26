@@ -37,17 +37,17 @@ $(document).ready(function(){
 		target.addClass('animate_clear');
 		setTimeout(function(){
 			target.removeClass('animate_clear');
-		}, 2000
-			);
+		}, 2000);
 
 
 
-		/*removeList=function(){
+
+		function removeList(){
 			$(this).closest('li').remove();
-		};*/
-		var removeList=$('#items1').closest('items');
+		}
 
-		removeList.remove();
+		removeList();
+
 		
 	});
 
