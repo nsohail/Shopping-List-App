@@ -33,27 +33,39 @@ $(document).ready(function(){
 
 
 	$('#items1').on('click', '.remove', function(){
+		event.preventDefault();
 		var target=$(this);
 		target.addClass('animate_clear');
 		setTimeout(function(){
-			target.removeClass('animate_clear');
+			target.removeClass('animate_clear').closest('li').remove();
 		}, 2000);
-
-
-
-
-		function removeList(){
-			$(this).closest('li').remove();
-		}
-
-		removeList();
-
-		
+	
 	});
 
 
 
-		function clear(){
+
+
+	$('#clear').on('click', '.clear', function(){
+		var target=$(this);
+		target.addClass('animate_clear_vertical');
+	});
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+	/*	function clear(){
 		$('#items1').children().remove();
 	}
 
@@ -64,6 +76,4 @@ $(document).ready(function(){
 		return false;
 	});
 
-
-
-});
+*/
