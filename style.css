@@ -1,16 +1,57 @@
+
 *{
 	font-family: Quicksand, sans-serif;
 }
 
-header{
-	background-color:#3a3a3a;
-	height:250px;
+html, body{
+	margin:0;
+	padding:0;
+	height:100%;
+	min-width: 870px;
+}
+
+body{
+	background-image: url('images/cork.jpg');
+	background-size: 30%;
+}
+
+
+
+
+#container{
+	min-height:100%;
+	width:100%;
+	position:relative;
+}
+
+
+#background{
+	background-color: #fff;
 	width:100%;
 }
 
+header{
+	background-color:white;
+	height:150px;
+	text-align: center;
+}
+
+header p{
+	font-size: 30px;
+	font-family: Quicksand, sans-serif;
+	padding-top: 50px;
+	color:rgb(34, 190, 195);
+	border:5px double #CA3434;
+	width:300px;
+	padding:30px;
+	margin:auto;
+}
+
+
+
 #search_area{
-	background-color:#efefef;
-	border-bottom: 3px solid #a3a3a3;
+	background-color:#CA3434;
+	border-bottom: 3px solid #7B1F1F;
 	padding:80px 50px 80px 50px;
 }
 
@@ -19,8 +60,17 @@ header{
 }
 
 .checked{
-	background-image:url('images/checked.jpg');
-	display: none;	
+	background-image:url('images/checked.jpg');	
+}
+
+.checkedText{
+	text-decoration: line-through;
+	color:gray;
+}
+
+.text{
+	color:#711E1E;
+	font-weight: bold;
 }
 
 .unchecked, .checked{
@@ -28,19 +78,18 @@ header{
 	height:30px;
 	float:left;
 	margin-right: 15px;
-
 }
 
 
-
 .items{
-	background-color: #d8d8d8;
-	border-bottom: 1px solid #a3a3a3;
+	background-color: rgba(255, 255, 255, 0.42);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 	padding:50px 0px 50px 50px;
 	background-repeat: no-repeat;
 	background-position: 25px 50%;
 	line-height:30px;
 	font-family:quicksand, sans-serif;
+	position: relative;
 	}
 
 
@@ -52,38 +101,172 @@ header{
 	border:1px solid #a3a3a3;
 }
 
+
+.entry:focus{
+	outline:none;
+}
 .add{
-	background-color: #a3a3a3;
+	background-color: rgb(34, 190, 195);
 	padding:15px 25px 15px 25px;
 	border-radius: 10px;
 	float:right;
 	border:0;
 }
 
+.add:focus{
+	outline:none;
+    box-shadow: inset 0 .5px 0 2px #635F5F;
+}
+
 .remove{
-	padding:15px 90px 15px 25px;
+	padding:0 90px 0 25px;
 	border-radius: 10px 0 0 10px;
-	background-color: #a3a3a3;
+	background-color: rgb(34, 190, 195);
 	border:0;
-	float:right;
-	margin-right:0;
+	position: absolute;
+	right:-2px;
+	text-align: left;
+	height:40px;
+}
+
+.remove:focus{
+	outline:none;
 }
 
 
-#container{
-	min-width:460px;
-}
 
 
 .clear{
-	background-color: #a3a3a3;
+	background-color: rgb(34, 190, 195);
 	padding:15px 40px 15px 40px;
 	border-radius: 5px 5px 0 0;
 	border:0;
 	margin: auto;
 }
 
-.bottom_tab{
-	background-color: #a3a3a3;
-	height:40px;
+.clear:focus{
+	outline:none;
 }
+
+#content
+{
+	width:100%;
+	padding-bottom: 80px;
+}
+
+
+#clear{
+	width:100%;
+	bottom:0;
+	min-height:113px;
+	position:absolute;
+}
+
+
+
+
+.bottom_tab{;
+	background-color: rgb(34, 190, 195);
+	height:70px;
+}
+
+.tab{
+	text-align:center;
+}
+
+
+
+.animate_clear_vertical{
+	animation:anim_clear 1s linear forwards,
+	anim_clear_back 1s linear forwards;
+
+	-webkit-animation:anim_clear 1s linear forwards,
+	anim_clear_back 1s linear forwards;
+}
+
+@-webkit-keyframes anim_clear{
+    0%{
+        top:200px;
+    }
+    100%{
+        top:0px;
+    }
+}
+
+@keyframes anim_clear{
+    0%{
+        top:200px;
+    }
+    100%{
+        top:0px;
+    }
+}
+
+
+@-webkit-keyframes anim_clear_back{
+    0%{
+        top:0px;
+    }
+    100%{
+        bottom:200px;
+    }
+}
+@keyframes anim_clear_back{
+    0%{
+        top:0px;
+    }
+    100%{
+        bottom:200px;
+    }
+}
+
+
+
+
+
+.animate_clear{
+    animation:anim_remove 1s linear forwards,
+    anim_remove_back 1s linear 1s;
+
+    -webkit-animation:anim_remove 1s linear forwards,
+    anim_remove_back 1s linear 1s;
+}
+
+
+
+
+@-webkit-keyframes anim_remove{
+    0%{
+        min-width:157px;
+    }
+    100%{
+        min-width:100%;
+    }
+}
+@keyframes anim_remove{
+    0%{
+        min-width:157px;
+    }
+    100%{
+        min-width:100%;
+    }
+}
+
+
+@-webkit-keyframes anim_remove_back{
+    0%{
+        min-width:100%;
+    }
+    100%{
+        min-width:157px;
+    }
+}
+@keyframes anim_remove_back{
+    0%{
+        min-width:100%;
+    }
+    100%{
+        min-width:157px;
+    }
+}
+
