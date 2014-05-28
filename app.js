@@ -42,6 +42,27 @@ $(document).ready(function(){
 
 		clear();
 	});
+	
+	//Target clear button and add an event listener for click
+	$('#clear .tab button.clear').click(function(){
+	    //Get height of container and subtract height of search area + padding
+	    var height = parseInt($('#container').css('height').replace('px','')) - 
+	        (parseInt($('#search_area').css('padding-top').replace('px','')) + 
+	         parseInt($('#search_area').css('padding-top').replace('px','')) +
+	         parseInt($('#search_area').css('height').replace('px','')));
+	    //Store old height
+	    var oldHeight = $('#clear .bottom_tab').css('height');
+	    //Target bottom area
+	    $('#clear .bottom_tab')
+	        //Animate it by changing height to calculated height of container - search area
+	        .animate({height:height+'px'},1000)
+	        //Delay retreat animation
+	        .delay('500')
+	        //Animate back to start
+	        .animate({height:oldHeight},1000);
+	    //Console just for testing
+	    console.log('clear',height,oldHeight);
+	});
 
 
 });
