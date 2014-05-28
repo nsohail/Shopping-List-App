@@ -158,7 +158,7 @@ header p{
 #clear{
 	width:100%;
 	bottom:0;
-	height:113px;
+	min-height:113px;
 	position:absolute;
 }
 
