@@ -38,18 +38,37 @@ $(document).ready(function(){
 		target.addClass('animate_clear');
 		setTimeout(function(){
 			target.removeClass('animate_clear').closest('li').remove();
-		}, 2000);
-	
+		}, 1600); //do this after 1600 milliseconds
 	});
 
 
 
 
 
-	$('#clear').on('click', '.clear', function(){
-		var target=$(this);
-		target.addClass('animate_clear_vertical');
-	});
+$('#clear .tab button.clear').click(function(){
+//Get height of container and subtract height of search area + padding
+var height = 505;
+
+//Store old height
+var oldHeight = $('#clear .bottom_tab').css('height');
+
+//Target bottom area
+$('#clear .bottom_tab').animate({height:height+'px'},1000);
+
+
+setTimeout(function(){
+var items=$('#items1').children();
+
+$('#clear .bottom_tab').animate({height:oldHeight},1000);
+items.remove();
+});
+
+});
+
+
+
+
+
 
 
 
