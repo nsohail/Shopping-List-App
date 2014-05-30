@@ -44,28 +44,25 @@ $(document).ready(function(){
 
 
 
-
 $('#clear .tab button.clear').click(function(){
-//Get height of container and subtract height of search area + padding
-var height = 505;
+	var height = parseInt($('#container').css('height').replace('px','')) - 
+	        (parseInt($('#search_area').css('padding-top').replace('px','')) + 
+	         parseInt($('#search_area').css('padding-bottom').replace('px','')) +
+	         parseInt($('#search_area').css('height').replace('px','')));
 
-//Store old height
-var oldHeight = $('#clear .bottom_tab').css('height');
+	var oldHeight = $('#clear .bottom_tab').css('height');
+	
+	function removeAll(){
+		var itemsHeight= $('#items').css('height');
+		var oldHeight= height-itemsHeight;
+		$('#items1').children().remove();
+	}
 
-//Target bottom area
-$('#clear .bottom_tab').animate({height:height+'px'},1000);
-
-
-setTimeout(function(){
-var items=$('#items1').children();
-
-$('#clear .bottom_tab').animate({height:oldHeight},1000);
-items.remove();
-});
-
-});
-
-
+	$('#clear .bottom_tab')
+	        .animate({height:height+'px'},1000,removeAll)
+	        .delay('500')
+	        .animate({height:oldHeight},1000);
+	});
 
 
 
@@ -74,7 +71,7 @@ items.remove();
 
 
 
-});
+});//document ends
 
 
 
