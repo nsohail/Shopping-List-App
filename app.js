@@ -53,8 +53,6 @@ $('#clear .tab button.clear').click(function(){
 	var oldHeight = $('#clear .bottom_tab').css('height');
 	
 	function removeAll(){
-		var itemsHeight= $('#items').css('height');
-		var oldHeight= height-itemsHeight;
 		$('#items1').children().remove();
 	}
 
