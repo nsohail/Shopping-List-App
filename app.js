@@ -1,4 +1,10 @@
-$(document).ready(function(){
+$(document).ready(function(){   
+	//Container is set to min-height 100%. 
+	//We need to store what it's height should be at 100% for later use 
+	var container_full_height = parseInt($('#container').css('height').replace('px','')) - 
+	        (parseInt($('#search_area').css('padding-top').replace('px','')) + 
+	         parseInt($('#search_area').css('padding-bottom').replace('px','')) +
+	         parseInt($('#search_area').css('height').replace('px','')));
 
 	//error when nothing is inputed
 
@@ -53,13 +59,19 @@ $('#clear .tab button.clear').click(function(){
 	var oldHeight = $('#clear .bottom_tab').css('height');
 	
 	function removeAll(){
+        if(height > container_full_height){
+		$('#clear .bottom_tab').css({height:container_full_height});
+        }
+
+        
+        //Remove list items
 		$('#items1').children().remove();
 	}
 
 
 	$('#clear .bottom_tab')
 	        .animate({height:height+'px'},1000,removeAll)
-	        .delay('500')
+	        .delay('1000')
 	        .animate({height:oldHeight},1000);
 	});
 
