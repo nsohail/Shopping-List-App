@@ -14,7 +14,7 @@ $(document).ready(function(){
 
 		if (entryItem.trim().length !== 0){
 
-			$('#items1').append('<li class="items"><div class="unchecked"></div><span class="text">'+entryItem+'</span><button type "button" class="remove">Remove</button></li>');
+			$('#items1').append('<li class="items"><div class="removeListItems"><div class="unchecked"></div><span class="text">'+entryItem+'</span><button type "button" class="remove">Remove</button></div></li>');
 
 			$('.entry').val('');
 
@@ -43,7 +43,8 @@ $(document).ready(function(){
 		var target=$(this);
 		target.addClass('animate_clear');
 		setTimeout(function(){
-			target.removeClass('animate_clear').closest('li').remove();
+			//target.removeClass('animate_clear').closest('li').remove();
+			target.removeClass('animate_clear').remove('.removeListItems');
 		}, 1600); //do this after 1600 milliseconds
 	});
 
