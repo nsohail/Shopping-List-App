@@ -70,6 +70,7 @@ header p{
 	width:700px;
 	float:left;
 	font-weight: bolder;
+	line-height: 35px;
 }
 
 .text{
@@ -192,11 +193,11 @@ header p{
 /* FOR REMOVE BUTTON */
 
 .animate_clear{
-    animation:anim_remove .8s linear forwards,
-    anim_remove_back .8s linear .8s;
+    animation:anim_remove 1s linear forwards,
+    anim_remove_back 1s linear 1.2s;
 
-    -webkit-animation:anim_remove .8s linear forwards,
-    anim_remove_back .8s linear .8s;
+    -webkit-animation:anim_remove 1s linear forwards,
+    anim_remove_back 1s linear 1.2s;
 }
 
 
