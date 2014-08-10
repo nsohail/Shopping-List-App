@@ -45,9 +45,13 @@ header p{
 	width:300px;
 	padding:30px;
 	margin:auto;
+
 }
 
-
+#title{
+	display:table-cell;
+	vertical-align: middle;
+}
 
 #search_area{
 	background-color:#CA3434;

@@ -31,8 +31,8 @@ $(document).ready(function(){
 	//crossing off a list item
     
 
-    $('#items1').on('click', 'div', function () {
-        //$(this).toggleClass('checked unchecked');
+    $('#items1').on('click', '.unchecked', function () {
+        $(this).toggleClass('checked');
         $(this).siblings('span').toggleClass('text checkedText');
     });
 
