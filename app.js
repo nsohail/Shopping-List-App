@@ -1,10 +1,13 @@
 $(document).ready(function(){   
 	//Container is set to min-height 100%. 
 	//We need to store what it's height should be at 100% for later use 
+	//this is the height of the list area
 	var container_full_height = parseInt($('#container').css('height').replace('px','')) - 
 	        (parseInt($('#search_area').css('padding-top').replace('px','')) + 
 	         parseInt($('#search_area').css('padding-bottom').replace('px','')) +
 	         parseInt($('#search_area').css('height').replace('px','')));
+
+
 
 	//error when nothing is inputed
 
@@ -69,29 +72,28 @@ $(document).ready(function(){
 
 
 
-$('#clear .tab button.clear').click(function(){
-	var height = parseInt($('#container').css('height').replace('px','')) - 
-	        (parseInt($('#search_area').css('padding-top').replace('px','')) + 
-	         parseInt($('#search_area').css('padding-bottom').replace('px','')) +
-	         parseInt($('#search_area').css('height').replace('px','')));
+	$('#clear .tab button.clear').click(function(){
+		var height = parseInt($('#container').css('height').replace('px','')) - 
+		        (parseInt($('#search_area').css('padding-top').replace('px','')) + 
+		         parseInt($('#search_area').css('padding-bottom').replace('px','')) +
+		         parseInt($('#search_area').css('height').replace('px','')));
 
-	var oldHeight = $('#clear .bottom_tab').css('height');
-	
-	function removeAll(){
-        if(height > container_full_height){
-		$('#clear .bottom_tab').css({height:container_full_height});
-        }
+		var oldHeight = $('#clear .bottom_tab').css('height');
+		
 
-        
-        //Remove list items
+		$('#clear .bottom_tab').animate({height:height+'px'},1000,removeAll)
+		.delay('1000')
+		.animate({height:oldHeight},1000);
+
+		function removeAll(){
+	    if(height > container_full_height){  //if the new height w/items is bigger than the original height
+	    $('#clear .bottom_tab').css({height:container_full_height}); //
+	    }
+
+
+	    //Remove list items
 		$('#items1').children().remove();
-	}
-
-
-	$('#clear .bottom_tab')
-	        .animate({height:height+'px'},1000,removeAll)
-	        .delay('1000')
-	        .animate({height:oldHeight},1000);
+		}
 	});
 
 
